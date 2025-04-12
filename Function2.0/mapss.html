@@ -1,0 +1,403 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Store Location - Brad's Eatery Kitchen and Cafe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  header {
+    background-color: #210000;
+    padding: 20px 0;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+  }
+
+  header .logo img {
+    height: 110px;
+  }
+
+  nav a {
+    margin: 0 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    text-decoration: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  #place-order-button,
+  #place-order-button * {
+    text-decoration: none !important;
+    color: inherit;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .items-center {
+    align-items: center;
+  }
+
+  .gap-6 {
+    gap: 24px;
+  }
+
+  button.menu-button {
+    font-family: 'Poppins', sans-serif;
+    background-color: #210000;
+    color: white;
+    border: 2px solid white;
+    padding: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    width: 120px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-button:hover {
+    background-color: #333;
+    border-color: #333;
+    color: white;
+  }
+
+  .icon-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  .icon {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(1);
+  }
+
+  .badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-size: 12px;
+  }
+
+  .location-container {
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    width: 80%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .location-container h2 {
+    color: #210000;
+    font-size: 24px;
+  }
+
+  .location-container h3 {
+    font-size: 18px;
+    color: #333;
+  }
+
+  .location-container iframe {
+    border: 0;
+    width: 100%;
+    height: 350px;
+  }
+
+  .contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .icon-facebook,
+  .icon-phone {
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #210000;
+    color: white;
+    border-radius: 10px;
+    margin: 5px;
+  }
+
+  .contact-container span {
+    font-size: 16px;
+    margin: 0 10px;
+    color: #333;
+  }
+
+  footer {
+    background-color: #210000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    header .container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    nav a {
+      display: block;
+      margin: 10px 0;
+    }
+
+    .location-container,
+    .contact-container {
+      width: 90%;
+    }
+  }
+</style>
+
+</head>
+
+<body>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/67e68601881c401909b3e812/1ine7mtlq';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+  
+<header>
+  <div class="container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="Brs1.png" width="115" height="120" alt="Brad's Logo" />
+      </a>
+    </div>
+    <nav>
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="menu.html" class="hover:underline">Menu</a>
+      <a href="about us1.html" class="hover:underline">About Us</a>
+      <a href="FAQs.html" class="hover:underline">FAQ</a>
+      <a href="mapss.html" class="hover:underline">Store Location</a>
+    </nav>
+    <div class="flex items-center gap-6">
+      <a href="#" id="place-order-button">
+        <button class="menu-button">Place Order</button>
+      </a>
+      <div class="icon-container">
+        <img src="pps.png" alt="Cart" class="icon" id="orders-icon" />
+        <span class="badge" id="orders-count">0</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  header {
+    background-color: #210000;
+    padding: 20px 0;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+  }
+
+  header .logo img {
+    max-height: 110px;
+    width: auto;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  nav a {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .items-center {
+    align-items: center;
+  }
+
+  .gap-6 {
+    gap: 24px;
+  }
+
+  button.menu-button {
+    font-family: 'Poppins', sans-serif;
+    background-color: #210000;
+    color: white;
+    border: 2px solid white;
+    padding: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    width: 120px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-button:hover {
+    background-color: #333;
+    border-color: #333;
+    color: white;
+  }
+
+  .icon-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+  }
+
+  .badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-size: 12px;
+  }
+
+  @media (max-width: 768px) {
+    header .container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    nav {
+      flex-direction: column;
+    }
+
+    nav a {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+  }
+</style>
+
+
+  <div class="location-container">
+    <h2><i class="fas fa-map-marker-alt" style="font-size: 47px"></i> We are Located at:</h2>
+    <h3>969 Rizal Ave, Santa Cruz, Manila, 1008 Metro Manila</h3>
+    <br />
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.8746416746344!2d120.98198090000001!3d14.606216199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cbf3a958703b%3A0xeb2dc903de2e073c!2sBrad's%20Kitchen%20%26%20Cafe!5e0!3m2!1sen!2sph!4v1740989715047!5m2!1sen!2sph"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+
+  <div class="contact-container">
+    <a href="https://www.facebook.com/profile.php?id=61555844705865&sk=photos" target="_blank">
+      <i class="fab fa-facebook-square icon-facebook"></i>
+    </a>
+    <span>BRAD'S Kitchen & Cafe</span>
+    <span>|</span>
+    <i class="fas fa-phone-alt icon-phone"></i>
+    <span>0963 834 8033</span>
+  </div>
+
+  <footer>
+    <p>© 2025 Brad's Kitchen & Café. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

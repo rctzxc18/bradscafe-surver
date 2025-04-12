@@ -1,0 +1,1083 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu - Brad's Eatery Kitchen and Cafe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      scroll-behavior: smooth;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #210000;
+      padding: 20px 0;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+      margin: auto;
+    }
+
+    header .logo img {
+      height: 110px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .button-container {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 10px;
+      margin-bottom: 20px;
+      justify-items: center;
+      padding: 20px;
+    }
+
+    .button-container a button {
+      font-family: 'Poppins', sans-serif;
+      background-color: #210000;
+      color: white;
+      border: none;
+      padding: 8px 0;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 120px;
+      text-align: center;
+    }
+
+    .button-container a button:hover {
+      background-color: #333;
+    }
+
+    .menu-title {
+      text-align: left;
+      margin-bottom: 10px;
+      padding: 20px;
+    }
+
+    .menu-items {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 0 20px 40px;
+    }
+
+    .menu-item {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: calc(25% - 20px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .menu-item img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .menu-item h3,
+    .menu-item p {
+      padding: 10px;
+    }
+
+    .menu-item .price {
+      display: block;
+      padding: 5px 0;
+      color: #333;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #210000;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: auto;
+    }
+
+    footer p {
+      font-size: 14px;
+    }
+
+    .quantity-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .quantity-container input {
+      width: 50px;
+      margin-left: 5px;
+      text-align: center;
+    }
+
+    @media (max-width: 1024px) {
+      .menu-item {
+        width: calc(50% - 20px);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .menu-item {
+        width: 100%;
+      }
+
+      header .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .button-container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="index.html"><img src="bradss.png" width="115" height="120" alt="Brad's Logo" /></a>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about us1.html">About Us</a>
+        <a href="FAQs.html">FAQ</a>
+        <a href="mapss.html">Store Location</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="menu" class="section">
+    <div class="container">
+      <br>
+      <div class="menu-title">
+        <h2>Our Menu</h2>
+      </div>
+
+      <div class="button-container">
+        <a href="#burgers"><button>Burgers</button></a>
+        <a href="#pasta"><button>Pasta</button></a>
+        <a href="#budget-meal"><button>Budget Meal</button></a>
+        <a href="#brads-silog"><button>Brad's Silog</button></a>
+        <a href="#sandwiches"><button>Sandwiches</button></a>
+        <a href="#fries"><button>Fries</button></a>
+        <a href="#sizzling"><button>For Sizzling's With Rice</button></a>
+        <a href="#best-seller"><button>Best Seller</button></a>
+        <a href="#salad"><button>Salad</button></a>
+        <a href="#iced-coffee"><button>Iced Coffee</button></a>
+        <a href="#chocolate-series"><button>Chocolate Series</button></a>
+        <a href="#fruit-tea"><button>Fruit Tea</button></a>
+        <a href="#frappes"><button>Frappes</button></a>
+        <a href="#milk-tea"><button>Milk Tea</button></a>
+        <a href="#cheese-tea-series"><button>Cheese Tea Series</button></a>
+        <a href="#other-drinks"><button>Other Drinks</button></a>
+        <a href="#fruit-shake"><button>Fruit Shake</button></a>
+      </div>
+
+      <!-- Burgers -->
+      <div class="menu-title" id="burgers">
+        <h2>Burgers</h2>
+      </div>
+      <div class="menu-items">
+        <div class="menu-item">
+          <h3>Regular Burger</h3>
+          <p class="price">Price: ₱59</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="regular-burger" />
+            <label for="regular-burger">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Cheese Burger</h3>
+          <p class="price">Price: ₱75</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="cheese-burger" />
+            <label for="cheese-burger">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Special Burger</h3>
+          <p class="price">Price: ₱120</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="special-burger" />
+            <label for="special-burger">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Bacon Cheese Burger</h3>
+          <p class="price">Price: ₱150</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="bacon-cheese-burger" />
+            <label for="bacon-cheese-burger">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Hungarian Sausage</h3>
+          <p class="price">Price: ₱120</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="hungarian-sausage" />
+            <label for="hungarian-sausage">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Pasta -->
+      <div class="menu-title" id="pasta">
+        <h2>Pasta</h2>
+      </div>
+      <div class="menu-items">
+        <div class="menu-item">
+          <h3>Chicken Alfredo</h3>
+          <p class="price">Price: ₱155 (Solo)</p>
+          <p class="price">Price: ₱320 (2-3 Person)</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="chicken-alfredo" />
+            <label for="chicken-alfredo">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Shrimp Alfredo</h3>
+          <p class="price">Price: ₱175 (Solo)</p>
+          <p class="price">Price: ₱380 (2-3 Person)</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="shrimp-alfredo" />
+            <label for="shrimp-alfredo">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Bacon Carbonara</h3>
+          <p class="price">Price: ₱175 (Solo)</p>
+          <p class="price">Price: ₱320 (2-3 Person)</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="bacon-carbonara" />
+            <label for="bacon-carbonara">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Tuna Pesto</h3>
+          <p class="price">Price: ₱155 (Solo)</p>
+          <p class="price">Price: ₱370 (2-3 Person)</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="tuna-pesto" />
+            <label for="tuna-pesto">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Budget Meal -->
+      <div class="menu-title" id="budget-meal">
+        <h2>Budget Meal</h2>
+      </div>
+      <div class="menu-items">
+        <div class="menu-item">
+          <h3>Shanghai</h3>
+          <p class="price">Price: ₱65</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="shanghai" />
+            <label for="shanghai">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Siomai with Rice</h3>
+          <p class="price">Price: ₱65</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="siomai" />
+            <label for="siomai">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Brad's Silog -->
+      <div class="menu-title" id="brads-silog">
+        <h2>Brad's Silog</h2>
+      </div>
+      <div class="menu-items">
+        <div class="menu-item">
+          <h3>Hamsilog</h3>
+          <p class="price">Price: ₱75</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="hamsilog" />
+            <label for="hamsilog">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Hungarian Silog</h3>
+          <p class="price">Price: ₱99</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="hungarian-silog" />
+            <label for="hungarian-silog">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Tapsi Silog</h3>
+          <p class="price">Price: ₱99</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="tapsi-silog" />
+            <label for="tapsi-silog">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Pork Silog</h3>
+          <p class="price">Price: ₱99</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="pork-silog" />
+            <label for="pork-silog">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Tocilog</h3>
+          <p class="price">Price: ₱99</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="tocilog" />
+            <label for="tocilog">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Chicksilog</h3>
+          <p class="price">Price: ₱99</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="chicksilog" />
+            <label for="chicksilog">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Sandwiches -->
+      <div class="menu-title" id="sandwiches">
+        <h2>Sandwiches</h2>
+      </div>
+      <div class="menu-items">
+        <div class="menu-item">
+          <h3>Clubhouse</h3>
+          <p class="price">Price: ₱159</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="clubhouse" />
+            <label for="clubhouse">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Tuna Sandwich</h3>
+          <p class="price">Price: ₱125</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="tuna-sandwich" />
+            <label for="tuna-sandwich">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Fries -->
+      <div class="menu-title" id="fries">
+        <h2>Fries</h2>
+      </div>
+      <div class="menu-items">
+        <div class="menu-item">
+          <h3>Fries</h3>
+          <p class="price">Price: ₱60 (Medium)</p>
+          <p class="price">Price: ₱110 (Large)</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="fries" />
+            <label for="fries">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Flavored Fries</h3>
+          <p class="price">Price: ₱70 (Medium)</p>
+          <p class="price">Price: ₱120 (Large)</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="flavored-fries" />
+            <label for="flavored-fries">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Cheese</h3>
+          <p class="price">Price: ₱155</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="cheese-fries" />
+            <label for="cheese-fries">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Barbecue</h3>
+          <p class="price">Price: ₱250</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="barbecue-fries" />
+            <label for="barbecue-fries">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Sour Cream</h3>
+          <p class="price">Price: ₱155</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="sour-cream-fries" />
+            <label for="sour-cream-fries">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Nachos</h3>
+          <p class="price">Price: ₱250</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="nachos" />
+            <label for="nachos">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+      </div>
+
+      <!-- For Sizzling with Rice -->
+      <div class="menu-title" id="sizzling">
+        <h2>For Sizzling with Rice</h2>
+      </div>
+      <div class="menu-items">
+        <div class="menu-item">
+          <h3>Pork Sisig (Crispy)</h3>
+          <p class="price">Price: ₱129</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="pork-sisig" />
+            <label for="pork-sisig">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Porkchop</h3>
+          <p class="price">Price: ₱129</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="porkchop" />
+            <label for="porkchop">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Pork Liempo</h3>
+          <p class="price">Price: ₱129</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="pork-liempo" />
+            <label for="pork-liempo">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Chicken Fillet</h3>
+          <p class="price">Price: ₱129</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="chicken-fillet" />
+            <label for="chicken-fillet">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Fish Fillet with Butter & Garlic Sauce</h3>
+          <p class="price">Price: ₱129</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="fish-fillet" />
+            <label for="fish-fillet">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Best Seller -->
+      <div class="menu-title" id="best-seller">
+        <h2>Best Seller</h2>
+      </div>
+      <div class="menu-items">
+        <div class="menu-item">
+          <h3>Caldereta with Rice</h3>
+          <p class="price">Price: ₱120</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="caldereta" />
+            <label for="caldereta">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Beef Steak with Rice</h3>
+          <p class="price">Price: ₱129</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="beef-steak" />
+            <label for="beef-steak">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Barbecue Spareribs with Rice</h3>
+          <p class="price">Price: ₱129</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="barbecue-spareribs" />
+            <label for="barbecue-spareribs">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Sweet and Sour Chicken Fillet</h3>
+          <p class="price">Price: ₱120</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="sweet-sour-chicken" />
+            <label for="sweet-sour-chicken">Select</label>
+                        <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Sweet and Sour Pork</h3>
+          <p class="price">Price: ₱120</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="sweet-sour-pork" />
+            <label for="sweet-sour-pork">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Salad -->
+      <div class="menu-title" id="salad">
+        <h2>Salad</h2>
+      </div>
+      <div class="menu-items">
+        <div class="menu-item">
+          <h3>Tuna Salad</h3>
+          <p class="price">Price: ₱99</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="tuna-salad" />
+            <label for="tuna-salad">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Chicken Salad</h3>
+          <p class="price">Price: ₱110</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="chicken-salad" />
+            <label for="chicken-salad">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Macaroni Salad</h3>
+          <p class="price">Price: ₱110</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="macaroni-salad" />
+            <label for="macaroni-salad">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Iced Coffee -->
+      <div class="menu-title" id="iced-coffee">
+        <h2>Iced Coffee</h2>
+      </div>
+      <div class="menu-items">
+        <div class="menu-item">
+          <h3>Americano</h3>
+          <p class="price">Price: Piccolo: ₱90</p>
+          <p class="price">Price: Medium: ₱100</p>
+          <p class="price">Price: Grande: ₱120</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="americano" />
+            <label for="americano">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Hazelnut Latte</h3>
+          <p class="price">Price: Piccolo: ₱95</p>
+          <p class="price">Price: Medium: ₱115</p>
+          <p class="price">Price: Grande: ₱135</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="hazelnut-latte" />
+            <label for="hazelnut-latte">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Mocha</h3>
+          <p class="price">Price: Piccolo: ₱95</p>
+          <p class="price">Price: Medium: ₱115</p>
+          <p class="price">Price: Grande: ₱135</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="mocha" />
+            <label for="mocha">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Caramel Macchiato</h3>
+          <p class="price">Price: Piccolo: ₱95</p>
+          <p class="price">Price: Medium: ₱115</p>
+          <p class="price">Price: Grande: ₱135</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="caramel-macchiato" />
+            <label for="caramel-macchiato">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Spanish Latte</h3>
+          <p class="price">Price: Piccolo: ₱95</p>
+          <p class="price">Price: Medium: ₱115</p>
+          <p class="price">Price: Grande: ₱135</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="spanish-latte" />
+            <label for="spanish-latte">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Macadamia</h3>
+          <p class="price">Price: Piccolo: ₱95</p>
+          <p class="price">Price: Medium: ₱115</p>
+          <p class="price">Price: Grande: ₱135</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="macadamia" />
+            <label for="macadamia">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Blended Coffee -->
+      <div class="menu-title" id="blended-coffee">
+        <h2>Blended Coffee</h2>
+      </div>
+      <div class="menu-items">
+        <div class="menu-item">
+          <h3>Java Chip</h3>
+          <p class="price">Price: Medium: ₱110</p>
+          <p class="price">Price: Grande: ₱130</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="java-chip" />
+            <label for="java-chip">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Hazelnut Chip</h3>
+          <p class="price">Price: Medium: ₱110</p>
+          <p class="price">Price: Grande: ₱130</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="hazelnut-chip" />
+            <label for="hazelnut-chip">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Mocha</h3>
+          <p class="price">Price: Medium: ₱110</p>
+          <p class="price">Price: Grande: ₱130</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="mocha-blended" />
+            <label for="mocha-blended">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Dark Forest</h3>
+          <p class="price">Price: Medium: ₱110</p>
+          <p class="price">Price: Grande: ₱130</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="dark-forest" />
+            <label for="dark-forest">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Chocolate Series -->
+      <div class="menu-title" id="chocolate-series">
+        <h2>Chocolate Series</h2>
+      </div>
+      <div class="menu-items">
+        <div class="menu-item">
+          <h3>Choco Latte</h3>
+          <p class="price">Price: Medium: ₱110</p>
+          <p class="price">Price: Grande: ₱130</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="choco-latte" />
+            <label for="choco-latte">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Dark Choco</h3>
+          <p class="price">Price: Medium: ₱110</p>
+          <p class="price">Price: Grande: ₱130</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="dark-choco" />
+            <label for="dark-choco">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Choco Mat</h3>
+          <p class="price">Price: Medium: ₱110</p>
+          <p class="price">Price: Grande: ₱130</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="choco-mat" />
+            <label for="choco-mat">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Fruit Tea -->
+      <div class="menu-title" id="fruit-tea">
+        <h2>Fruit Tea</h2>
+      </div>
+      <div class="menu-items">
+        <div class="menu-item">
+          <h3>Peach, Lychee, Green Apple</h3>
+          <p class="price">Price: Medium: ₱90</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="fruit-tea-1" />
+            <label for="fruit-tea-1">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Strawberry, Yakult</h3>
+          <p class="price">Price: Medium: ₱90</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="fruit-tea-2" />
+            <label for="fruit-tea-2">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Frappes -->
+      <div class="menu-title" id="frappes">
+        <h2>Frappes</h2>
+      </div>
+      <div class="menu-items">
+        <div class="menu-item">
+          <h3>Choco Chip</h3>
+          <p class="price">Price: Medium: ₱110</p>
+          <p class="price">Price: Grande: ₱130</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="choco-chip" />
+            <label for="choco-chip">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Strawberries</h3>
+          <p class="price">Price: Medium: ₱110</p>
+          <p class="price">Price: Grande: ₱130</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="strawberries" />
+            <label for="strawberries">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Blueberries</h3>
+          <p class="price">Price: Medium: ₱110</p>
+          <p class="price">Price: Grande: ₱130</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="blueberries" />
+            <label for="blueberries">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Vanilla</h3>
+          <p class="price">Price: Medium: ₱110</p>
+          <p class="price">Price: Grande: ₱130</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="vanilla" />
+            <label for="vanilla">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Oreo</h3>
+          <p class="price">Price: Medium: ₱110</p>
+          <p class="price">Price: Grande: ₱130</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="oreo" />
+            <label for="oreo">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Matcha Cream</h3>
+          <p class="price">Price: Medium: ₱130</p>
+          <p class="price">Price: Grande: ₱165</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="matcha-cream" />
+            <label for="matcha-cream">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Matcha Oreo</h3>
+          <p class="price">Price: Medium: ₱130</p>
+          <p class="price">Price: Grande: ₱165</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="matcha-oreo" />
+            <label for="matcha-oreo">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Strawberry Mango</h3>
+          <p class="price">Price: Medium: ₱130</p>
+          <p class="price">Price: Grande: ₱165</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="strawberry-mango" />
+            <label for="strawberry-mango">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Milk Tea -->
+      <div class="menu-title" id="milk-tea">
+        <h2>Milk Tea</h2>
+      </div>
+      <div class="menu-items">
+        <div class="menu-item">
+          <h3>White Pearl</h3>
+          <p class="price">Price: Medium: ₱110</p>
+          <p class="price">Price: Grande: ₱130</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="white-pearl" />
+            <label for="white-pearl">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Wintermelon</h3>
+          <p class="price">Price: Medium: ₱110</p>
+          <p class="price">Price: Grande: ₱130</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="wintermelon" />
+            <label for="wintermelon">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Okinawa</h3>
+          <p class="price">Price: Medium: ₱110</p>
+          <p class="price">Price: Grande: ₱130</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="okinawa" />
+            <label for="okinawa">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Taro</h3>
+          <p class="price">Price: Medium: ₱110</p>
+          <p class="price">Price: Grande: ₱130</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="taro" />
+            <label for="taro">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Oreo Milk Tea</h3>
+          <p class="price">Price: Medium: ₱110</p>
+          <p class="price">Price: Grande: ₱130</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="oreo-milk-tea" />
+            <label for="oreo-milk-tea">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Matcha Milk Tea</h3>
+          <p class="price">Price: Medium: ₱110</p>
+          <p class="price">Price: Grande: ₱130</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="matcha-milk-tea" />
+            <label for="matcha-milk-tea">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Cheese Tea Series -->
+      <div class="menu-title" id="cheese-tea-series">
+        <h2>Cheese Tea Series</h2>
+      </div>
+      <div class="menu-items">
+        <div class="menu-item">
+          <h3>Winter Party</h3>
+          <p class="price">Price: Medium: ₱120</p>
+          <p class="price">Price: Grande: ₱140</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="winter-party" />
+            <label for="winter-party">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Choco Party</h3>
+          <p class="price">Price: Medium: ₱120</p>
+          <p class="price">Price: Grande: ₱140</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="choco-party" />
+            <label for="choco-party">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Other Drinks -->
+      <div class="menu-title" id="other-drinks">
+        <h2>Other Drinks</h2>
+      </div>
+      <div class="menu-items">
+        <div class="menu-item">
+          <h3>Red Iced Tea</h3>
+          <p class="price">Price: Medium: ₱70</p>
+          <p class="price">Price: Grande: ₱90</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="red-iced-tea" />
+            <label for="red-iced-tea">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Blue Lemonade</h3>
+          <p class="price">Price: Medium: ₱70</p>
+          <p class="price">Price: Grande: ₱90</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="blue-lemonade" />
+            <label for="blue-lemonade">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Fruit Shake -->
+      <div class="menu-title" id="fruit-shake">
+        <h2>Fruit Shake</h2>
+      </div>
+      <div class="menu-items">
+        <div class="menu-item">
+          <h3>Avocado</h3>
+          <p class="price">Price: Medium: ₱110</p>
+          <p class="price">Price: Grande: ₱130</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="avocado" />
+            <label for="avocado">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Mango</h3>
+          <p class="price">Price: Medium: ₱110</p>
+          <p class="price">Price: Grande: ₱130</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="mango" />
+            <label for="mango">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Dragon Fruit</h3>
+          <p class="price">Price: Medium: ₱110</p>
+          <p class="price">Price: Grande: ₱130</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="dragon-fruit" />
+            <label for="dragon-fruit">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+        <div class="menu-item">
+          <h3>Halo Halo</h3>
+          <p class="price">Price: Medium: ₱110</p>
+          <p class="price">Price: Grande: ₱130</p>
+          <div class="quantity-container">
+            <input type="checkbox" id="halo-halo" />
+            <label for="halo-halo">Select</label>
+            <input type="number" min="1" value="1" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Brad's Eatery Kitchen and Cafe</p>
+  </footer>
+</body>
+</html>

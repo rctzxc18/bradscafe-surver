@@ -1,0 +1,774 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Menu - Brad's Eatery Kitchen and Cafe</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com">
+
+
+
+, 300);
+}
+</script>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #210000;
+  padding: 10px 0;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  padding-top: 10px;
+}
+
+header .logo img {
+  max-width: 115px;  /* Ensures the logo doesn't stretch */
+  height: auto;      /* Maintains the aspect ratio */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+ .intro-container {
+            display: flex;
+            align-items: center;
+            margin: 50px 0;
+            flex: 1;
+        }
+
+        .intro-image {
+            width: 40%;
+            margin-right: 30px;
+            margin-left: 50px;
+        }
+
+        .intro-image img {
+            width: 90%;
+            border-radius: 5px;
+        }
+
+        .intro-text {
+            width: 50%;
+        }
+
+        .intro-text h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .intro-text p {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-6 {
+  gap: 24px;
+}
+
+button.menu-button {
+  font-family: 'Poppins', sans-serif;
+  background-color: #210000;
+  color: white;
+  border: 2px solid white;
+  padding: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+  width: 120px;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-button:hover {
+  background-color: #333;
+  border-color: #333;
+  color: white;
+}
+
+.menu-header {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #210000;
+  margin-bottom: 20px;
+}
+
+.menu-title {
+  text-align: left;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 20px 40px;
+}
+
+.menu-item {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: calc(25% - 20px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.input-box {
+  width: 50px;
+  text-align: center;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+footer {
+  background-color: #210000;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+.order-form {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.order-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #210000;
+}
+
+.order-form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.order-form input[type="text"],
+.order-form input[type="email"],
+.order-form input[type="tel"],
+.order-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.order-form button {
+  background-color: #210000;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.5s;
+  width: 100%;
+}
+
+.order-form button:hover {
+  background-color: #333;
+}
+
+.icon-container {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1); /* Make the icon white */
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 5px;
+  font-size: 12px;
+}
+
+/* Styling for Button Container to be in 1 row */
+.button-container {
+  display: flex;
+  justify-content: center;  /* Centers the buttons horizontally */
+  gap: 15px;                /* Adds spacing between buttons */
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.button-container a {
+  text-decoration: none;
+}
+
+.button-container button {
+  width: 120px; /* Fixed width for buttons */
+}
+
+  </style>
+</head>
+<body>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/67e68601881c401909b3e812/1ine7mtlq';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+<header>
+<div class="container">
+<div class="logo">
+<a href="index.html">
+<img alt="Brad's Logo" height="120" src="Brs1.png" width="115"/>
+</a>
+</div>
+<nav>
+<a class="hover:underline" href="index.html">Home</a>
+<a class="hover:underline" href="menu.html">Menu</a>
+<a class="hover:underline" href="about us1.html">About Us</a>
+<a class="hover:underline" href="FAQs.html">FAQ</a>
+<a class="hover:underline" href="mapss.html">Store Location</a>
+</nav>
+<div class="flex items-center gap-6">
+<a href="#" id="place-order-button">
+<button class="menu-button">Place Order</button>
+</a>
+<div class="icon-container">
+<img alt="Cart" class="icon" id="orders-icon" src="pps.png"/>
+<span class="badge" id="cart-count">0</span>
+</div>
+</div>
+</div>
+</header>
+<style>
+  header {
+    background-color: #210000;
+    padding: 20px 0;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+  }
+
+  header .logo img {
+    max-height: 110px;
+    width: auto;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  nav a {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .items-center {
+    align-items: center;
+  }
+
+  .gap-6 {
+    gap: 24px;
+  }
+
+  button.menu-button {
+    font-family: 'Poppins', sans-serif;
+    background-color: #210000;
+    color: white;
+    border: 2px solid white;
+    padding: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    width: 120px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-button:hover {
+    background-color: #333;
+    border-color: #333;
+    color: white;
+  }
+
+  .icon-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+  }
+
+  .badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-size: 12px;
+  }
+
+  @media (max-width: 768px) {
+    header .container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    nav {
+      flex-direction: column;
+    }
+
+    nav a {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+  }
+</style>
+<br/>
+<center><h2 class="menu-header">Brad's Food Menu</h2></center>
+<div class="button-container">
+<a href="#food"><button class="menu-button">Food</button></a>
+<a href="#desert"><button class="menu-button">Desert</button></a>
+<a href="#drinks"><button class="menu-button">Drinks</button></a>
+<a href="#sharing"><button class="menu-button">Sharing Meal</button></a>
+</div>
+<div id="menu-wrapper">
+<!-- Coffee Blends -->
+<div class="menu-title" id="drinks">
+<h2>Drinks</h2>
+</div>
+<div class="menu-items">
+<div class="menu-item">
+<img alt="Americano" src="americano.jpg"/>
+<div class="flex items-center justify-center mt-4">
+<input data-sizes='{"Hot":80,"Grande":90,"Venti":100}' id="americano" name="drinks" type="checkbox" value="Americano"/>
+<label class="ml-2 text-gray-700" for="americano">Add to Cart: Americano (₱90 Grande)</label>
+</div>
+</div>
+<div class="menu-item">
+<img alt="Caramel Macchiato" src="caramel.jpg"/>
+<div class="flex items-center justify-center mt-4">
+<input data-sizes='{"Hot":95,"Grande":115,"Venti":135}' id="Caramel Macchiato" name="drinks" type="checkbox" value="Caramel Macchiato"/>
+<label class="ml-2 text-gray-700" for="Caramel Macchiato">Add to Cart:Caramel Macchiatoo (₱115 Grande)</label>
+</div>
+</div>
+<div class="menu-item">
+<img alt="Cinnamon Dolce" src="cinamon.jpg"/>
+<div class="flex items-center justify-center mt-4">
+<input data-sizes='{"Hot":95,"Grande":115,"Venti":135}' id="French Vanilla" name="drinks" type="checkbox" value="Cinnamon Dolce"/>
+<label class="ml-2 text-gray-700" for="Cinnamon Dolce">Add to Cart: Cinnamon Dolce (₱115 Grande)</label>
+</div>
+</div>
+<div class="menu-item">
+<img alt="French Vanilla" src="french.jpg"/>
+<div class="flex items-center justify-center mt-4">
+<input data-sizes='{"Hot":95,"Grande":115,"Venti":135}' id="French Vanilla" name="drinks" type="checkbox" value="French Vanilla"/>
+<label class="ml-2 text-gray-700" for="French Vanilla">Add to Cart: French Vanilla (₱115 Grande)</label>
+</div>
+</div>
+<div class="menu-item">
+<img alt="Hazelnut" src="h1d.jpg"/>
+<div class="flex items-center justify-center mt-4">
+<input data-sizes='{"Hot":95,"Grande":115,"Venti":135}' id="Hazelnut" name="drinks" type="checkbox" value="Hazelnut"/>
+<label class="ml-2 text-gray-700" for="Hazelnut">Add to Cart: Hazelnut (₱115 Grande)</label>
+</div>
+</div>
+<div class="menu-item">
+<img alt="Iced Shaken Espresso" src="ice.jpg"/>
+<div class="flex items-center justify-center mt-4">
+<input data-sizes='{"Grande":120,"Venti":140}' id="Iced Shaken Espresso" name="drinks" type="checkbox" value="Iced Shaken Espresso"/>
+<label class="ml-2 text-gray-700" for="Iced Shaken Espresso">Add to Cart: Iced Shaken Espresso (₱120 Grande)</label>
+</div>
+</div>
+<div class="menu-item">
+<img alt="Latte" src="latte.jpg"/>
+<div class="flex items-center justify-center mt-4">
+<input data-sizes='{"Hot":90,"Grande":100,"Venti":110}' id="Latte" name="drinks" type="checkbox" value="Latte"/>
+<label class="ml-2 text-gray-700" for="Latte">Add to Cart: Latte (₱100 Grande)</label>
+</div>
+</div>
+<div class="menu-item">
+<img alt="Mocha" src="mocha.jpg"/>
+<div class="flex items-center justify-center mt-4">
+<input data-sizes='{"Hot":95,"Grande":115,"Venti":135}' id="aMocha" name="drinks" type="checkbox" value="Mocha"/>
+<label class="ml-2 text-gray-700" for="Mocha">Add to Cart: Mocha (₱115 Grande)</label>
+</div>
+</div>
+<div class="menu-item">
+<img alt="Oreo Latte" src="oreo.jpg"/>
+<div class="flex items-center justify-center mt-4">
+<input data-sizes='{"Grande":120,"Venti":140}' id="Oreo Latte" name="drinks" type="checkbox" value="Oreo Latte"/>
+<label class="ml-2 text-gray-700" for="Oreo Latte">Add to Cart: Oreo Latte (₱90 Grande)</label>
+</div>
+</div>
+<div class="menu-item">
+<img alt="Spanish Latte" src="spanish.jpg"/>
+<div class="flex items-center justify-center mt-4">
+<input data-sizes='{"Hot":95,"Grande":115,"Venti":135}' id="Spanish Latte" name="drinks" type="checkbox" value="Spanish Latte"/>
+<label class="ml-2 text-gray-700" for="Spanish Latte">Add to Cart: Spanish Latte (₱135 Grande)</label>
+</div>
+</div>
+<div class="menu-item">
+<img alt="White Chocolate Mocha" src="white.jpg"/>
+<div class="flex items-center justify-center mt-4">
+<input data-sizes='{"Hot":95,"Grande":115,"Venti":135}' id="White Chocolate Mocha" name="drinks" type="checkbox" value="White Chocolate Mocha"/>
+<label class="ml-2 text-gray-700" for="White Chocolate Mocha">Add to Cart: White Chocolate Mocha (₱115 Grande)</label>
+</div>
+</div>
+
+
+</div>
+
+
+
+<div class="order-form" id="order-form" style="display: none;">
+<h2>Order Form</h2>
+<form action="https://api.web3forms.com/submit" id="form" method="POST">
+<input name="access_key" type="hidden" value="8c4e14fa-9b32-4214-bda7-e5802ea98e62"/>
+<label for="name">Name:</label>
+<input id="name" name="name" required="" type="text"/>
+<label for="email">Email:</label>
+<input id="email" name="email" required="" type="email"/>
+<label for="phone">Phone Number:</label>
+<input id="phone" name="phone" required="" type="tel"/>
+<p>Down payment of at least 200 pesos is required.</p>
+<label for="ref">Reference Number GCash:</label>
+<input id="ref" name="ref" required="" type="tel"/>
+<!-- Filled dynamically with JS -->
+<div id="selected-items-container"></div>
+<div id="total-summary">
+<p>Total Quantity: <span id="total-quantity">0</span></p>
+<p>Total Price: <span id="total-price">₱0.00</span></p>
+</div>
+<div style="text-align: center; margin-bottom: 15px;">
+<button class="menu-button" onclick="window.location.href='menu.html';" type="button">Back to Menu</button>
+</div>
+<button type="submit">Submit Order</button>
+</form>
+</div>
+<footer>
+<p>© 2023 Brad's Eatery Kitchen and Cafe. All rights reserved.</p>
+</footer>
+<script>
+  const placeOrderButton = document.getElementById('place-order-button');
+  const orderFormContainer = document.getElementById('order-form');
+  const formElement = document.querySelector('#order-form form');
+  const selectedItemsContainer = document.getElementById('selected-items-container');
+  const totalQuantityDisplay = document.getElementById('total-quantity');
+  const totalPriceDisplay = document.getElementById('total-price');
+  const cartCountDisplay = document.getElementById('cart-count');
+
+  function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+
+  function updateCartCount() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+    cartCountDisplay.textContent = checkboxes.length;
+  }
+
+  function updateCartSummary() {
+    let totalQuantity = 0;
+    let totalPrice = 0;
+
+    const itemEntries = document.querySelectorAll('.item-entry');
+    itemEntries.forEach((itemDiv) => {
+      const quantityInput = itemDiv.querySelector('.quantity-input');
+      const sizeSelector = itemDiv.querySelector('select');
+
+      const quantity = parseInt(quantityInput.value);
+      const itemPrice = sizeSelector
+        ? parseFloat(sizeSelector.options[sizeSelector.selectedIndex].getAttribute('data-price'))
+        : parseFloat(quantityInput.dataset.price);
+
+      totalQuantity += quantity;
+      totalPrice += quantity * itemPrice;
+    });
+
+    totalQuantityDisplay.textContent = totalQuantity;
+    totalPriceDisplay.textContent = `₱${totalPrice.toFixed(2)}`;
+  }
+
+  placeOrderButton.addEventListener('click', function(e) {
+    e.preventDefault();
+    selectedItemsContainer.innerHTML = '';
+    totalQuantityDisplay.textContent = '0';
+    totalPriceDisplay.textContent = '₱0.00';
+
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+    if (checkboxes.length === 0) {
+      alert("Please select at least one item before placing an order.");
+      return;
+    }
+
+    checkboxes.forEach((checkbox) => {
+      const itemDiv = document.createElement('div');
+      itemDiv.classList.add('item-entry');
+      itemDiv.style.display = 'flex';
+      itemDiv.style.alignItems = 'center';
+      itemDiv.style.gap = '10px';
+      itemDiv.style.marginBottom = '10px';
+
+      const label = document.createElement('label');
+      label.textContent = checkbox.value;
+      label.style.flex = '1';
+
+      const input = document.createElement('input');
+      input.type = 'number';
+      input.name = `quantity-${checkbox.id}`;
+      input.min = 1;
+      input.value = 1;
+      input.required = true;
+      input.classList.add('quantity-input');
+
+      let price = parseFloat(checkbox.dataset.price);
+      input.dataset.price = price;
+
+      let sizeSelector;
+      const sizesAttr = checkbox.getAttribute('data-sizes');
+      if (sizesAttr) {
+        const sizes = JSON.parse(sizesAttr);
+        sizeSelector = document.createElement('select');
+        sizeSelector.name = `size-${checkbox.id}`;
+
+        for (const [size, price] of Object.entries(sizes)) {
+          const option = document.createElement('option');
+          option.value = size;
+          option.setAttribute('data-price', price);
+          option.textContent = `${capitalize(size)} - ₱${price}`;
+          sizeSelector.appendChild(option);
+        }
+
+        const defaultPrice = parseFloat(sizeSelector.options[0].getAttribute('data-price'));
+        input.dataset.price = defaultPrice;
+
+        sizeSelector.addEventListener('change', function () {
+          const selectedPrice = parseFloat(this.options[this.selectedIndex].getAttribute('data-price'));
+          input.dataset.price = selectedPrice;
+          updateCartSummary();
+        });
+
+        itemDiv.appendChild(sizeSelector);
+      }
+
+      const removeBtn = document.createElement('button');
+      removeBtn.type = 'button';
+      removeBtn.classList.add('remove-button');
+      removeBtn.dataset.id = checkbox.id;
+      removeBtn.textContent = 'Remove';
+      removeBtn.style.padding = '4px 10px';
+      removeBtn.style.background = 'red';
+      removeBtn.style.color = 'white';
+      removeBtn.style.border = 'none';
+      removeBtn.style.borderRadius = '5px';
+      removeBtn.style.cursor = 'pointer';
+
+      itemDiv.appendChild(label);
+      itemDiv.appendChild(input);
+      itemDiv.appendChild(removeBtn);
+      selectedItemsContainer.appendChild(itemDiv);
+    });
+
+    updateCartSummary();
+    orderFormContainer.style.display = 'block';
+    orderFormContainer.scrollIntoView({ behavior: 'smooth' });
+    updateCartCount();
+  });
+
+  selectedItemsContainer.addEventListener('click', function(e) {
+    if (e.target.classList.contains('remove-button')) {
+      const itemId = e.target.dataset.id;
+      const checkbox = document.getElementById(itemId);
+      if (checkbox) checkbox.checked = false;
+      e.target.parentElement.remove();
+      updateCartSummary();
+      updateCartCount();
+    }
+  });
+
+  selectedItemsContainer.addEventListener('input', function() {
+    updateCartSummary();
+    updateCartCount();
+  });
+
+  document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+    checkbox.addEventListener('change', updateCartCount);
+  });
+
+  formElement.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const form = this;
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Submitting...";
+
+    const formData = new FormData(form);
+    const selectedItems = [];
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+
+    checkboxes.forEach((checkbox) => {
+      const quantity = formData.get(`quantity-${checkbox.id}`) || 1;
+      const size = formData.get(`size-${checkbox.id}`) || 'default';
+      selectedItems.push(`${checkbox.value} (Quantity: ${quantity}, Size: ${size})`);
+    });
+
+    const hiddenInput = document.createElement('input');
+    hiddenInput.type = 'hidden';
+    hiddenInput.name = 'selected_items';
+    hiddenInput.value = selectedItems.join(', ');
+    form.appendChild(hiddenInput);
+
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: new FormData(form)
+    });
+
+    if (response.ok) {
+      form.reset();
+      selectedItemsContainer.innerHTML = '';
+      totalQuantityDisplay.textContent = '0';
+      totalPriceDisplay.textContent = '₱0.00';
+      cartCountDisplay.textContent = '0';
+      submitBtn.textContent = "Submit";
+      submitBtn.disabled = false;
+      alert('Order submitted successfully!');
+    } else {
+      alert('There was a problem submitting your order. Please try again.');
+      submitBtn.textContent = "Submit";
+      submitBtn.disabled = false;
+    }
+  });
+</script>
+</div></body></html>

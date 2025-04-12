@@ -1,0 +1,32 @@
+div class="quantity-container">
+     <label class="flex items-center">
+      <input class="mr-2" type="checkbox"/>
+      Medium: ₱110
+     </label>
+     <input min="0" type="number" value="0"/>
+    </div>
+    <div class="quantity-container">
+     <label class="flex items-center">
+      <input class="mr-2" type="checkbox"/>
+      Grande: ₱130
+     </label>
+     <input min="0" type="number" value="0"/>
+    </div>
+   </div>
+
+<div class="quantity-container">
+     <label class="flex items-center">
+      <input class="mr-2" type="checkbox"/>
+      ₱175 (Solo)
+     </label>
+     <input min="0" type="number" value="0"/>
+    </div>
+    <div class="quantity-container">
+     <label class="flex items-center">
+      <input class="mr-2" type="checkbox"/>
+      ₱380 (2-3 Person)
+     </label>
+     <input min="0" type="number" value="0"/>
+    </div>
+   </div>
+  </div>

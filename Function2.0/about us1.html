@@ -1,0 +1,410 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Brad's Eatery Kitchen and Cafe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  /* Global Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  header {
+    background-color: #210000;
+    padding: 20px 0;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+  }
+
+  header .logo img {
+    height: 110px;
+  }
+
+  nav a {
+    margin: 0 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    text-decoration: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  #place-order-button,
+  #place-order-button * {
+    text-decoration: none !important;
+    color: inherit;
+  }
+
+  .about-container {
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+    flex: 1;
+  }
+
+  .about-image {
+    width: 40%;
+    margin-right: 30px;
+    margin-left: 50px;
+  }
+
+  .about-image img {
+    width: 90%;
+    border-radius: 5px;
+  }
+
+  .about-text {
+    width: 50%;
+  }
+
+  .about-text h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .about-text p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .icon-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  .icon {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(1);
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 30px 30px;
+  }
+
+  .gallery img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  footer {
+    background-color: #210000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    header .container {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 90%;
+    }
+
+    nav {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    nav a {
+      font-size: 14px;
+    }
+
+    .about-container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .about-image {
+      width: 80%;
+      margin-right: 0;
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+
+    .about-text {
+      width: 100%;
+    }
+
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .items-center {
+    align-items: center;
+  }
+
+  .gap-6 {
+    gap: 24px;
+  }
+
+  button.menu-button {
+    font-family: 'Poppins', sans-serif;
+    background-color: #210000;
+    color: white;
+    border: 2px solid white;
+    padding: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    width: 120px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-button:hover {
+    background-color: #333;
+    border-color: #333;
+    color: white;
+  }
+
+  .badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-size: 12px;
+  }
+</style>
+
+</head>
+<body>
+
+   <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/67e68601881c401909b3e812/1ine7mtlq';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script--> 
+<header>
+  <div class="container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="Brs1.png" width="115" height="120" alt="Brad's Logo" />
+      </a>
+    </div>
+    <nav>
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="menu.html" class="hover:underline">Menu</a>
+      <a href="about us1.html" class="hover:underline">About Us</a>
+      <a href="FAQs.html" class="hover:underline">FAQ</a>
+      <a href="mapss.html" class="hover:underline">Store Location</a>
+    </nav>
+    <div class="flex items-center gap-6">
+      <a href="#" id="place-order-button">
+        <button class="menu-button">Place Order</button>
+      </a>
+      <div class="icon-container">
+        <img src="pps.png" alt="Cart" class="icon" id="orders-icon" />
+        <span class="badge" id="orders-count">0</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  header {
+    background-color: #210000;
+    padding: 20px 0;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+  }
+
+  header .logo img {
+    max-height: 110px;
+    width: auto;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  nav a {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .items-center {
+    align-items: center;
+  }
+
+  .gap-6 {
+    gap: 24px;
+  }
+
+  button.menu-button {
+    font-family: 'Poppins', sans-serif;
+    background-color: #210000;
+    color: white;
+    border: 2px solid white;
+    padding: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    width: 120px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-button:hover {
+    background-color: #333;
+    border-color: #333;
+    color: white;
+  }
+
+  .icon-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+  }
+
+  .badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-size: 12px;
+  }
+
+  @media (max-width: 768px) {
+    header .container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    nav {
+      flex-direction: column;
+    }
+
+    nav a {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+  }
+</style>
+
+
+    <div class="about-container">
+        <div class="about-image">
+            <img src="brs.jpg" alt="Brad's Kitchen Image">
+        </div>
+        <div class="about-text">
+            <h2>About Us</h2>
+            <p>
+                The business officially started in January 2024 owned by Mr. Manuel Vasquez. It was located at 969 Avenue Barangay 314, Santa Cruz, Manila,
+Mr. Vasquez shared that the store is inspired by the thought of people sharing a meal with a special someone just like an everyday meal that is shared at home. His passion for creating memorable dining experiences led him to open the café offering delicious coffee and food. Brad’s Kitchen and Café opens from 12 PM  to 12AM, from Monday to Sunday.
+            </p>
+        </div>
+    </div>
+
+    <div class="gallery">
+        <img src="Brs2.jpg" alt="Delicious Dish 1">
+        <img src="ict.jpg" alt="Delicious Dish 2">
+        <img src="ict4.png" alt="Delicious Dish 3">
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Brad's Kitchen & Café. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

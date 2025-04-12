@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Brad's Eatery Kitchen and Cafe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #210000;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        input, select {
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        button {
+            background-color: #210000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Order from Brad's Eatery Kitchen and Cafe</h1>
+    
+    <form id="order-form">
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="gcash-ref">GCash Reference #</label>
+            <input type="text" id="gcash-ref" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="items">Select Items</label>
+            <select id="items" required>
+                <option value="">--Select Item--</option>
+                <option value="Burger">Burger</option>
+                <option value="Pizza">Pizza</option>
+                <option value="Pasta">Pasta</option>
+                <option value="Drinks">Drinks</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" value="1" min="1" required>
+        </div>
+        
+        <button type="submit">Place Order</button>
+    </form>
+
+    <script>
+        document.getElementById('order-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const gcashRef = document.getElementById('gcash-ref').value;
+            const items = document.getElementById('items').value;
+            const quantity = parseInt(document.getElementById('quantity').value);
+            
+            const menuPrices = {
+                "Burger": 150,
+                "Pizza": 250,
+                "Pasta": 200,
+                "Drinks": 50
+            };
+
+            const itemPrice = menuPrices[items];
+            const totalPrice = itemPrice * quantity;
+
+            const orderData = {
+                name: name,
+                email: email,
+                phone: phone,
+                ref: gcashRef,
+                totalQuantity: quantity,
+                totalPrice: totalPrice,
+                items: [{
+                    item: items,
+                    quantity: quantity
+                }]
+            };
+
+            localStorage.setItem("orderData", JSON.stringify(orderData));
+
+            // Redirect to the thank you page
+            window.location.href = "thankyou.html";
+        });
+    </script>
+
+</body>
+</html>

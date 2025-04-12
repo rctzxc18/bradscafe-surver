@@ -1,0 +1,568 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu - Brad's Eatery Kitchen and Cafe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #210000;
+  padding: 10px 0;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  padding-top: 10px;
+}
+
+header .logo img {
+  max-width: 115px;  /* Ensures the logo doesn't stretch */
+  height: auto;      /* Maintains the aspect ratio */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+ .intro-container {
+            display: flex;
+            align-items: center;
+            margin: 50px 0;
+            flex: 1;
+        }
+
+        .intro-image {
+            width: 40%;
+            margin-right: 30px;
+            margin-left: 50px;
+        }
+
+        .intro-image img {
+            width: 90%;
+            border-radius: 5px;
+        }
+
+        .intro-text {
+            width: 50%;
+        }
+
+        .intro-text h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .intro-text p {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-6 {
+  gap: 24px;
+}
+
+button.menu-button {
+  font-family: 'Poppins', sans-serif;
+  background-color: #210000;
+  color: white;
+  border: 2px solid white;
+  padding: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+  width: 120px;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-button:hover {
+  background-color: #333;
+  border-color: #333;
+  color: white;
+}
+
+.menu-header {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #210000;
+  margin-bottom: 20px;
+}
+
+.menu-title {
+  text-align: left;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 20px 40px;
+}
+
+.menu-item {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: calc(25% - 20px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.input-box {
+  width: 50px;
+  text-align: center;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+footer {
+  background-color: #210000;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+.order-form {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.order-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #210000;
+}
+
+.order-form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.order-form input[type="text"],
+.order-form input[type="email"],
+.order-form input[type="tel"],
+.order-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.order-form button {
+  background-color: #210000;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.5s;
+  width: 100%;
+}
+
+.order-form button:hover {
+  background-color: #333;
+}
+
+.icon-container {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1); /* Make the icon white */
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 5px;
+  font-size: 12px;
+}
+
+/* Styling for Button Container to be in 1 row */
+.button-container {
+  display: flex;
+  justify-content: center;  /* Centers the buttons horizontally */
+  gap: 15px;                /* Adds spacing between buttons */
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.button-container a {
+  text-decoration: none;
+}
+
+.button-container button {
+  width: 120px; /* Fixed width for buttons */
+}
+
+  </style>
+
+</head>
+<body>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/67e68601881c401909b3e812/1ine7mtlq';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+<header>
+  <div class="container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="Brs1.png" width="115" height="120" alt="Brad's Logo" />
+      </a>
+    </div>
+    <nav>
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="menu.html" class="hover:underline">Menu</a>
+      <a href="about us1.html" class="hover:underline">About Us</a>
+      <a href="FAQs.html" class="hover:underline">FAQ</a>
+      <a href="mapss.html" class="hover:underline">Store Location</a>
+    </nav>
+    <div class="flex items-center gap-6">
+      <a href="#" id="place-order-button">
+        <button class="menu-button">Place Order</button>
+      </a>
+      <div class="icon-container">
+        <img src="pps.png" alt="Cart" class="icon" id="orders-icon" />
+        <span class="badge" id="orders-count">0</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  header {
+    background-color: #210000;
+    padding: 20px 0;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+  }
+
+  header .logo img {
+    max-height: 110px;
+    width: auto;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  nav a {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .items-center {
+    align-items: center;
+  }
+
+  .gap-6 {
+    gap: 24px;
+  }
+
+  button.menu-button {
+    font-family: 'Poppins', sans-serif;
+    background-color: #210000;
+    color: white;
+    border: 2px solid white;
+    padding: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    width: 120px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-button:hover {
+    background-color: #333;
+    border-color: #333;
+    color: white;
+  }
+
+  .icon-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+  }
+
+  .badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-size: 12px;
+  }
+
+  @media (max-width: 768px) {
+    header .container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    nav {
+      flex-direction: column;
+    }
+
+    nav a {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+  }
+</style>
+
+
+    <div class="intro-container">
+        <div class="intro-image">
+            <img src="brs.jpg" alt="Brad's Kitchen Image">
+        </div>
+        <div class="intro-text">
+            <h2>Welcome to Brad's Kitchen and Café!</h2>
+            <p>
+                Brad’s Kitchen and Café is a dining concept that combines a meal alongside a cup of coffee and drinks. Brad’s menu features coffee-based drinks, frappes, milk teas, and fruit tea, alongside burgers, pasta, rice meals, and salads. Food and Café is not just about eating, it is an experience that should be enjoyed and appreciated. The name “Brads” was chosen for its simplicity, it came from the word Brad for “brother” and the s if for sister. It is a place where both ‘brad’ and ‘sis’ can enjoy good food and have fun together. The store brings a sense of companionship like family, where people could feel at home, much like sharing a meal with family or friends.
+                The place where Brad’s Kitchen and Café once stood is a boring and gloomy place, but when the renovation starts and the newly built Brad’s Kitchen and Café starts its operations, the once gloomy and boring place became lively and visited by customers.
+            </p>
+        </div>
+    </div>
+
+
+<footer>
+  <p>&copy; 2023 Brad's Eatery Kitchen and Cafe. All rights reserved.</p>
+</footer>
+
+<script>
+const placeOrderButton = document.getElementById('place-order-button');
+const orderForm = document.getElementById('order-form');
+const selectedItemsContainer = document.getElementById('selected-items-container');
+const totalQuantityDisplay = document.getElementById('total-quantity');
+const totalPriceDisplay = document.getElementById('total-price');
+const ordersCountDisplay = document.getElementById('orders-count');
+
+// Function to update the cart icon count
+function updateOrdersCount() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+    ordersCountDisplay.textContent = checkboxes.length; // Update the count of checked items
+}
+
+// Event listener for the Place Order button
+placeOrderButton.addEventListener('click', function(e) {
+    e.preventDefault(); // Prevent default anchor behavior
+    selectedItemsContainer.innerHTML = ''; // Clear previous selections
+    totalQuantityDisplay.textContent = '0'; // Reset total quantity
+    totalPriceDisplay.textContent = '₱0.00'; // Reset total price
+
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+    if (checkboxes.length === 0) {
+        alert("Please select at least one item before placing an order.");
+        return;
+    }
+
+    let totalQuantity = 0;
+    let totalPrice = 0;
+
+    checkboxes.forEach((checkbox) => {
+        const itemDiv = document.createElement('div');
+        itemDiv.innerHTML = `
+            <label>${checkbox.value}</label>
+            <input type="number" name="quantity-${checkbox.id}" min="1" value="1" required class="quantity-input" data-price="${checkbox.dataset.price}" />
+        `;
+        selectedItemsContainer.appendChild(itemDiv);
+
+        // Calculate total quantity and price for the selected items
+        totalQuantity += 1; // Each checkbox represents one item
+        totalPrice += parseFloat(checkbox.dataset.price); // Add the price of the selected item
+    });
+
+    // Update the total quantity and price displays
+    totalQuantityDisplay.textContent = totalQuantity; // Show total quantity
+    totalPriceDisplay.textContent = `₱${totalPrice.toFixed(2)}`; // Show total price
+
+    orderForm.style.display = 'block'; // Show the order form
+    updateOrdersCount(); // Update the orders count
+});
+
+// Event listener for quantity inputs
+selectedItemsContainer.addEventListener('input', function() {
+    let totalQuantity = 0;
+    let totalPrice = 0;
+
+    const quantityInputs = document.querySelectorAll('.quantity-input');
+    quantityInputs.forEach(input => {
+        const quantity = parseInt(input.value);
+        const price = parseFloat(input.dataset.price);
+        totalQuantity += quantity; // Update total quantity
+        totalPrice += quantity * price; // Update total price
+    });
+
+    totalQuantityDisplay.textContent = totalQuantity; // Show total quantity
+    totalPriceDisplay.textContent = `₱${totalPrice.toFixed(2)}`; // Show total price
+});
+
+const form = document.getElementById('form');
+
+// Event listener for form submission
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const selectedItems = [];
+
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+    checkboxes.forEach((checkbox) => {
+        const quantityInput = formData.get(`quantity-${checkbox.id}`);
+        selectedItems.push(`${checkbox.value} (Quantity: ${quantityInput})`);
+    });
+
+    // Prepare the form data
+    formData.append('selected_items', selectedItems.join(', '));
+
+    // Now submit the form
+    form.submit();
+});
+
+// Update the cart icon count whenever a checkbox is checked or unchecked
+document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+    checkbox.addEventListener('change', updateOrdersCount);
+});
+</script>
+</body>
+</html>
